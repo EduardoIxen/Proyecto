@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="31b9136b809847c2af0c6398c780a79d" Name="Diagram1">
+        <EntityTypeShape EntityType="Othello_201800524Model.CapacidadTorneo" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="Othello_201800524Model.Empate" Width="1.5" PointX="9.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Othello_201800524Model.Etapa" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Othello_201800524Model.Ganador" Width="1.5" PointX="9.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="Othello_201800524Model.Pais" Width="1.5" PointX="8.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="Othello_201800524Model.Partida" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Othello_201800524Model.Perdedor" Width="1.5" PointX="9.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Othello_201800524Model.TipoDePartida" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Othello_201800524Model.Torneo" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Othello_201800524Model.Usuario" Width="1.5" PointX="10.5" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="Othello_201800524Model.FK__Torneo__idCapaci__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="Othello_201800524Model.FK__Empate__idPartid__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="Othello_201800524Model.FK__Etapa__idTorneo__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="Othello_201800524Model.FK__Partida__etapa__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="Othello_201800524Model.FK__Ganador__idParti__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="Othello_201800524Model.FK__Usuario__pais__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="Othello_201800524Model.FK__Partida__idUsuar__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="Othello_201800524Model.FK__Partida__idUsuar__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="Othello_201800524Model.FK__Partida__tipoPar__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="Othello_201800524Model.FK__Perdedor__idPart__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="Othello_201800524Model.GanadorTorneo" ManuallyRouted="false" />
+        <AssociationConnector Association="Othello_201800524Model.RegistrarTorneo" ManuallyRouted="false" />
+        <AssociationConnector Association="Othello_201800524Model.RondaEliminado" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
