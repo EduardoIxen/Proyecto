@@ -1,13 +1,60 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
+<style>
+    body {
+        background: rgba(179,220,237,1);
+        background: -moz-linear-gradient(45deg, rgba(179,220,237,1) 0%, rgba(128,207,234,1) 11%, rgba(41,184,229,1) 30%, rgba(188,224,238,1) 81%, rgba(188,224,238,1) 99%);
+        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(179,220,237,1)), color-stop(11%, rgba(128,207,234,1)), color-stop(30%, rgba(41,184,229,1)), color-stop(81%, rgba(188,224,238,1)), color-stop(99%, rgba(188,224,238,1)));
+        background: -webkit-linear-gradient(45deg, rgba(179,220,237,1) 0%, rgba(128,207,234,1) 11%, rgba(41,184,229,1) 30%, rgba(188,224,238,1) 81%, rgba(188,224,238,1) 99%);
+        background: -o-linear-gradient(45deg, rgba(179,220,237,1) 0%, rgba(128,207,234,1) 11%, rgba(41,184,229,1) 30%, rgba(188,224,238,1) 81%, rgba(188,224,238,1) 99%);
+        background: -ms-linear-gradient(45deg, rgba(179,220,237,1) 0%, rgba(128,207,234,1) 11%, rgba(41,184,229,1) 30%, rgba(188,224,238,1) 81%, rgba(188,224,238,1) 99%);
+        background: linear-gradient(45deg, rgba(179,220,237,1) 0%, rgba(128,207,234,1) 11%, rgba(41,184,229,1) 30%, rgba(188,224,238,1) 81%, rgba(188,224,238,1) 99%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1 );
+    }
 
-<h2>Index</h2>
+    .tablero {
+        border: 1px solid #44CB71;
+        /*background-color: #0E722F;*/
+        /*background-image: url(img/botonNegro.png);*/
+        margin: 0px 0px 0px 0px;
+        width: 50px;
+        height: 50px;
+    }
+</style>
 @if (Session["idUsuario"] != null)
 {
     <h2>Bienvenido @Session["nombreUsuario"]</h2>
 }
-else 
-{ 
+else
+{
     <h2>Inicie sesion para acceder al contenido</h2>
 }
+<div>
+    @for (int i = 0; i < 10; i++)
+    {
+        <div>
+            @for (int j = 0; j < 10; j++)
+            {
+                @*<img id="@i + @j" onclick="myFunction(id)" width="50px" height="50px" src="~/Views/Home/img/fondoTab.png"/>*@
+                <input class="tablero" type="button" src="~/Views/Home/img/ficha.jpg" value="@ViewBag.matriz[i, j]" id="@i + @j" onclick="myFunction(id)"/>
+                @*<button class="tablero" id="@i + @j" onclick="myFunction(id)">@ViewBag.matriz[i, j]</button>*@
+
+            }
+        </div>
+    }
+</div>
+<script>
+    function myFunction(id) {
+        alert("mi alerta: " + id)
+        //document.getElementById(id).style.backgroundImage = "~/Views/Home/img/botonNegro.png";
+        //document.getElementById(id).setAttribute("src", "~/Views/Home/img/ficha.jpg");
+        //document.getElementById(id).style.backgroundImage = "url('img/botonNegro.png') center";
+        document.getElementById(id).style.background = "black";
+        document.getElementById(id).style.borderRadius = "50px";
+        //document.getElementById(id).style.animationDuration = "60s";
+        //document.getElementById(id).style.webkitTransition = "box-shadow 300ms ease-in-out, color 300ms ease-in-out";
+        //document.getElementById(id).style.transition = "box-shadow 300ms ease-in-out, color 300ms ease-in-out";
+
+}
+</script>

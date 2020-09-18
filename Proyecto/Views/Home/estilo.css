@@ -1,0 +1,8 @@
+﻿body {
+    background-color: orangered;
+}
+.tablero {
+    border: 1px solid #44CB71;
+    width: 50px;
+    height:50px;
+}
